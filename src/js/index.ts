@@ -6,12 +6,35 @@ new Vue({
     data: {
         number: 0,
         number2: 0,
-        result: 0
+        result: 0,
+        operation: "+"
+
     },
     methods: {
         calculate() {
-            console.log("Resultat = " + this.number + " " + this.number2)
-          this.result =  parseInt(this.number) + parseInt(this.number2) 
+            console.log("Resultat = " + this.number + " " + this.number2);
+            if (this.operation == "+") {
+                this.add()
+            } else if (this.operation == "-"){
+                this.sub()
+            } else if ( this.operation == "/"){
+                this.divide()
+            } else if(this.operation == "*"){
+                this.multi()
+            }
+        },
+        add() {
+            this.result = parseInt(this.number) + parseInt(this.number2);
+        },
+        sub() {
+            this.result = parseInt(this.number) - parseInt(this.number2);
+        },
+        divide() {
+            this.result = parseInt(this.number) / parseInt(this.number2);
+        },
+        multi() {
+            this.result = parseInt(this.number) * parseInt(this.number2);
         }
+
     }
 })

@@ -19,7 +19,13 @@
   <h1>Hello</h1>
   <div id="app">
     <input v-model="number" type="number" placeholder="Number 1">
-    +
+    <select v-model="operation" name="operation" id="operation">
+      <option value="+" selected>+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+
+    </select>
     <input v-model="number2" type="Number" placeholder="Number 2">
     <button v-on:click="calculate()" class="btn btn-primary">Se resultat</button>
     <div>{{ result }}</div>
