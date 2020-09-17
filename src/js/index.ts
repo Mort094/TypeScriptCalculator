@@ -4,18 +4,14 @@ new Vue({
     // which is included at the bottom of the html file.
     el: "#app",
     data: {
-        name: "",
-        greeting: ""
+        number: 0,
+        number2: 0,
+        result: 0
     },
     methods: {
-        sayHello() {
-            console.log("Say Hello " + this.name)
-            if (this.name == "") {
-                this.greeting = "Hello NoName"
-            }
-            else {
-                this.greeting = "Hello " + this.name
-            }
+        calculate() {
+            console.log("Resultat = " + this.number + " " + this.number2)
+          this.result =  parseInt(this.number) + parseInt(this.number2) 
         }
     }
 })

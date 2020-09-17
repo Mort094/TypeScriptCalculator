@@ -18,9 +18,11 @@
 <body>
   <h1>Hello</h1>
   <div id="app">
-    <input v-model="name" placeholder="Name">
-    <button v-on:click="sayHello()" class="btn btn-primary">Say hello</button>
-    <div>{{ greeting }}</div>
+    <input v-model="number" type="number" placeholder="Number 1">
+    +
+    <input v-model="number2" type="Number" placeholder="Number 2">
+    <button v-on:click="calculate()" class="btn btn-primary">Se resultat</button>
+    <div>{{ result }}</div>
   </div>
 
   <script src="bundle.js"></script>
